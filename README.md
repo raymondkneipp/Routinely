@@ -41,14 +41,17 @@ Routinely is a health and productivity app developed using the mern stack
 ## Deploy backend to Heroku
 
 1. Be sure to have [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line) installed
-2. Create a new app on Heroku dashboard
-3. Run `heroku git:remote -a <name-of-app>`
-4. Run `git subtree push --prefix server/ heroku master` from root project directory
-5. Hopefully I got all the steps and you did too!
+2. Run the command `heroku login`
+3. Create a new app on Heroku dashboard and give it a name
+4. Run `heroku git:remote -a <name-of-app>`
+5. Run `git subtree push --prefix server/ heroku master` from root project directory
+6. Set environment variables
+   - Set `MONGO_URI` to `mongodb+srv://<username>:<password>@cluster0.v4olk.gcp.mongodb.net/<database-name>?retryWrites=true&w=majority` and replace angle brackets with the correct credentials and database name
+   - Set `JWT_SECRET` to a random string
 
 ## Deploy front end to Netlify
 
-1. Add site from github
+1. Add new site from github
 2. Configure build settings
    - **Base Directory** `/client`
    - **Build Command** `npm run start`
