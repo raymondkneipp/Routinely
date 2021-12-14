@@ -1,0 +1,46 @@
+
+### Login
+POST http://localhost:5000/user/login
+Content-Type: application/json
+
+{
+    "email": "test@test.test",
+    "password": "test"
+}
+
+### Register
+POST http://localhost:5000/user/register
+Content-Type: application/json
+
+{
+	"fname": "test",
+	"lname": "test",
+	"email": "test@test.test",
+	"password": "test",
+	"confirmPassword": "test"
+}
+
+### Get User Data
+GET http://localhost:5000/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODYyMjcwMywiZXhwIjoxNjM4NjI2MzAzfQ.eGhQacrNYs708eZDc2ufpcT7LK8qY0d2xE_TQmliUiI
+
+### Change User Password
+PATCH http://localhost:5000/user/password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzOTM0MTI3MiwiZXhwIjoxNjM5MzQ0ODcyfQ.EaFqRYkNG_ukghFgCsp0kDtgJGJPGppSvrSxUGizktM
+Content-Type: application/json
+
+{
+	"oldPassword": "test",
+	"newPassword": "t3st",
+	"confirmPassword": "t3st"
+}
+
+### Change User First Name & Last Name
+PATCH http://localhost:5000/user/name
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzOTM4MzgwMSwiZXhwIjoxNjM5Mzg3NDAxfQ.q4dHuKYQ4p_yV-itVgpqM114uR0Oz4hagmOqI3gmjwo
+Content-Type: application/json
+
+{
+	"fname": "Test",
+	"lname": "Test"
+}

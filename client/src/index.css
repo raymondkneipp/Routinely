@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tooltip {
+	opacity: 1 !important;
+	@apply font-bold rounded-md w-36 h-12 flex items-center justify-center text-center text-base transition-all !important;
+}

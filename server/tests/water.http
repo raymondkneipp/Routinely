@@ -1,0 +1,17 @@
+### Get users water history
+GET http://localhost:5000/water
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzOTI0NjYzNSwiZXhwIjoxNjM5MjUwMjM1fQ.O25HiWGfIY7BMcLi6HJbxxe2mnvu0zYmBmsO0zIIFLI
+
+
+### Add water to user
+POST http://localhost:5000/water
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODg5NTczOSwiZXhwIjoxNjM4ODk5MzM5fQ.OsvijSS9jCcLM3gUF5U0zkZP7U67YJEB9RZdDSBSLrQ
+
+{
+	"amount": 200
+}
+
+### Delete water log
+DELETE http://localhost:5000/water/61b463d0994dd80f419883c6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzOTI0NjYzNSwiZXhwIjoxNjM5MjUwMjM1fQ.O25HiWGfIY7BMcLi6HJbxxe2mnvu0zYmBmsO0zIIFLI

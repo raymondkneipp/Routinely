@@ -1,0 +1,40 @@
+### Create a tasks for the user
+POST http://localhost:5000/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODc0MTEwMCwiZXhwIjoxNjM4NzQ0NzAwfQ.uq8ZN2j3xjAocZGqj2BU4mqH8llkNHidUHB6-x2RDds
+
+{
+	"name": "new task"
+}
+
+### Get users tasks
+GET http://localhost:5000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODk5OTE4OCwiZXhwIjoxNjM5MDAyNzg4fQ.cxYD5zENHhwpP36rvm1RK7ZjLImGJ4SZU-gOd5lmz4Y
+
+### Update a task
+PATCH http://localhost:5000/tasks/61aba53ca3947ed7fc8e64dc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODYzNzYwNywiZXhwIjoxNjM4NjQxMjA3fQ.f2-GSFzRp5O9bnDSO4YAesq382i1Ecotn431b_Ai1E4
+
+{
+	"name": "updated task"
+}
+
+### Complete a task on given date
+PUT http://localhost:5000/tasks/61aba53ca3947ed7fc8e64dc/completed
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODczOTQ2MiwiZXhwIjoxNjM4NzQzMDYyfQ.QIZP1eSjshuJmBX5ltc-NnEpIKadQMp4c1z_lF_obss
+
+
+### Remove date from task
+DELETE  http://localhost:5000/tasks/61aba53ca3947ed7fc8e64dc/completed
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODczOTQ2MiwiZXhwIjoxNjM4NzQzMDYyfQ.QIZP1eSjshuJmBX5ltc-NnEpIKadQMp4c1z_lF_obss
+
+{
+	"date": "2021-12-05T21:33:16.135Z"
+}
+
+### Delete a users task
+DELETE http://localhost:5000/tasks/61ab933b1b53d7aca7212e16
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTYzODk5OTE4OCwiZXhwIjoxNjM5MDAyNzg4fQ.cxYD5zENHhwpP36rvm1RK7ZjLImGJ4SZU-gOd5lmz4Y
