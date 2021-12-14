@@ -1,6 +1,12 @@
 # Routinely
 
-Routinely is a health and productivity app developed using the mern stack
+Routinely is a health and productivity app.
+
+## Demo
+
+The demo can be found [here](https://getroutinely.netlify.app/)
+
+## The Stack
 
 - MongoDB
 - Express
@@ -9,11 +15,11 @@ Routinely is a health and productivity app developed using the mern stack
 
 ## Backend
 
-`express-validator` is used to handle the validation of api endpoint requests
+`express-validator` is used to handle endpoint validation
 
 `jsonwebtoken` and `bcryptjs` are used to handle authentication
 
-`REST Client` vscode extension is used to test endpoints
+`REST Client` is the Visual Studio Code extension used to test endpoints
 
 ## Frontend
 
@@ -36,20 +42,24 @@ Routinely is a health and productivity app developed using the mern stack
 - Inputs with type of password rendered with a button to toggle visibility
 - Only clear newTask creation input if it is successful
 - Updating password | if incorrect old password app logs you out
-- Seperate reducer and actions for authentication and changing user data ie. name and password
+- Separate reducer and actions for authentication and changing user data ie. name and password
+- Add twin.macro to handle style better
+- Create a custom chart for water
 
-## Deploy backend to Heroku
+## Deployment
+
+### Deploy backend to Heroku
 
 1. Be sure to have [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line) installed
 2. Run the command `heroku login`
 3. Create a new app on Heroku dashboard and give it a name
 4. Run `heroku git:remote -a <name-of-app>`
-5. Run `git subtree push --prefix server/ heroku master` from root project directory
+5. Run `git subtree push --prefix server/ heroku master` from the root project directory
 6. Set environment variables
    - Set `MONGO_URI` to `mongodb+srv://<username>:<password>@cluster0.v4olk.gcp.mongodb.net/<database-name>?retryWrites=true&w=majority` and replace angle brackets with the correct credentials and database name
    - Set `JWT_SECRET` to a random string
 
-## Deploy front end to Netlify
+### Deploy front end to Netlify
 
 1. Add new site from github
 2. Configure build settings
