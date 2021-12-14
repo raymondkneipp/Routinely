@@ -46,6 +46,24 @@ The demo can be found [here](https://getroutinely.netlify.app/)
 - Add twin.macro to handle style better
 - Create a custom chart for water
 
+## Run locally
+
+1. Navigate to `server/`
+2. Create a `.env` file with the following variables
+
+```
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.v4olk.gcp.mongodb.net/<database-name>?retryWrites=true&w=majority
+
+JWT_SECRET=thisisasecret
+```
+
+3. Change the content in the angle brackets
+4. Run `npm install`
+5. Run `npm run dev`
+6. In a new terminal navigate to `client/`
+7. Run `npm install`
+8. Run `npm run start`
+
 ## Deployment
 
 ### Deploy backend to Heroku
