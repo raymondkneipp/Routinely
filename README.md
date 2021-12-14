@@ -85,3 +85,4 @@ JWT_SECRET=thisisasecret
 - Separate reducer and actions for authentication and changing user data ie. name and password
 - Add twin.macro to handle style better
 - Create a custom chart for water
+- Add Weight, Sleep, Breathing, Stretching, Meal Plan, Training, Cardio, & Meditation Pages
