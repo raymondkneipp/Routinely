@@ -1,7 +1,5 @@
 import React from "react";
 import { Button } from "./";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
 	return (
@@ -16,24 +14,13 @@ const Hero = () => {
 				<div className="container mx-auto p-5">
 					<div className="md:w-1/2 space-y-5">
 						<h1 className="text-3xl md:text-6xl font-bold">
-							<span className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-red-400">
-								Health
-							</span>{" "}
-							&{" "}
-							<span className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">
-								Productivity
-							</span>{" "}
-							Made Easy
+							Health & Productivity Made Easy
 						</h1>
 						<p className="md:text-lg">
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe,
 							libero! Eaque assumenda harum itaque, facere necessitatibus
 						</p>
-						<Button
-							href="register"
-							theme="primary"
-							icon={<FontAwesomeIcon icon={faUserPlus} size="lg" />}
-						>
+						<Button href="register" theme="primary">
 							Create An Account
 						</Button>
 					</div>

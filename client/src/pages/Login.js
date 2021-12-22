@@ -35,12 +35,17 @@ const Login = () => {
 	}, [user, navigate]);
 
 	return (
-		<div className="max-w-sm mx-auto space-y-5 pt-10 p-5">
+		<div className="max-w-sm mx-auto space-y-5 pt-20 p-5">
 			<Header
 				large
 				icon={<FontAwesomeIcon icon={faSignInAlt} size="lg" />}
 				title="Sign In"
 			/>
+
+			<div className="bg-red-300 p-5 text-gray-900 text-center rounded-md">
+				For Testing Purposes email: <strong>test@test.test</strong> password:{" "}
+				<strong>test</strong>
+			</div>
 			<form onSubmit={handleSubmit}>
 				<Card>
 					<Input

@@ -39,7 +39,7 @@ const Register = () => {
 
 	return (
 		<div>
-			<div className="max-w-sm mx-auto space-y-5 pt-10 p-5">
+			<div className="max-w-sm mx-auto space-y-5 pt-20 p-5">
 				<Header
 					large
 					icon={<FontAwesomeIcon icon={faUserPlus} size="lg" />}
