@@ -75,14 +75,17 @@ JWT_SECRET=thisisasecret
 
 ## TODO
 
-- Move salt to .env
 - When checking if tasks are completed on a given date check if task was created before the date
 - Show token expiration error
 - Show message on successful password change
 - Inputs with type of password rendered with a button to toggle visibility
 - Only clear newTask creation input if it is successful
-- Updating password | if incorrect old password app logs you out
 - Separate reducer and actions for authentication and changing user data ie. name and password
 - Add twin.macro to handle style better
 - Create a custom chart for water
-- Add Weight, Sleep, Breathing, Stretching, Meal Plan, Training, Cardio, & Meditation Pages
+- Add Weight, Sleep, Breathing, Stretching, Meal Plan, Training, Cardio, Meditation, Daily Gratitude, Intermittent Fasting, Mood
+- Move get requests to App.js so they run once rather than every time you visit the page
+- Typescript?
+- Truncate todo if too long
+- Improve navigation (combine user and regular navbar) and change nav for mobile
+- Finish home page
