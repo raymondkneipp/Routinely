@@ -81,11 +81,21 @@ JWT_SECRET=thisisasecret
 - Inputs with type of password rendered with a button to toggle visibility
 - Only clear newTask creation input if it is successful
 - Separate reducer and actions for authentication and changing user data ie. name and password
-- Add twin.macro to handle style better
+- Add twin.macro
 - Create a custom chart for water
-- Add Weight, Sleep, Breathing, Stretching, Meal Plan, Training, Cardio, Meditation, Daily Gratitude, Intermittent Fasting, Mood
+- Weight Tracker
+- Sleep Tracker
+- Breathing Exercises
+- Meal Planner
+- Training Log
+- Cardio Log
+- Meditation Guide
+- Daily Graditude
+- Intermittent Fasting
+- Mood Tracker
+- Dynamic stretches (warm up)
+- Static stretches (cool down)
 - Move get requests to App.js so they run once rather than every time you visit the page
 - Typescript?
-- Truncate todo if too long
-- Improve navigation (combine user and regular navbar) and change nav for mobile
+- Improve navigation for mobile
 - Finish home page
