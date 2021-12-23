@@ -9,9 +9,9 @@ const PrivateOutlet = () => {
 	return user.isAuthenticated ? (
 		<div className="flex">
 			<AuthNav />
-			<div className="mt-16 flex-1 ml-16">
-				<User />
+			<div className="flex-1 ml-16">
 				<div className="p-2 md:p-5 space-y-5">
+					<User />
 					<Outlet />
 				</div>
 			</div>

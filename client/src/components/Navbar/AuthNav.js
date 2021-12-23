@@ -33,7 +33,7 @@ const AuthNav = () => {
 		<nav className="w-16 bg-gray-900 border-r border-gray-800 fixed top-0 bottom-0 flex flex-col">
 			<Link
 				to="/dashboard"
-				className="font-bold text-xl border-b border-gray-800 text-white flex space-x-2 items-center justify-center p-4 outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-50 ring-inset"
+				className="font-bold text-xl text-white flex space-x-2 items-center justify-center p-4 outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-50 ring-inset"
 			>
 				<Logo />
 			</Link>

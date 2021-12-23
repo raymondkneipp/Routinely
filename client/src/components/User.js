@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Button } from "./";
 import { logout, getUser } from "../actions/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignOutAlt, faCog } from "@fortawesome/free-solid-svg-icons";
+import { faSignOutAlt, faCog, faUser } from "@fortawesome/free-solid-svg-icons";
+import Card from "./Card";
 
 const User = () => {
 	const dispatch = useDispatch();
@@ -15,19 +16,35 @@ const User = () => {
 
 	if (user.isAuthenticated && user.fname && user.lname) {
 		return (
-			<div className="py-3 px-3 md:px-5 border-b border-gray-800 fixed top-0 bg-gray-900 left-16 z-50 right-0 flex justify-end space-x-5">
-				<div className="flex items-center">
-					<h6 className="text-sm font-bold text-white">
-						{user.fname} {user.lname}
-					</h6>
+			<Card>
+				<div className="flex flex-wrap justify-between sm:items-center gap-5">
+					<div className="flex items-center gap-5">
+						<div className="flex bg-gray-300 text-black rounded-full overflow-hidden items-end justify-center w-10 h-10">
+							<FontAwesomeIcon icon={faUser} size="2x" />
+						</div>
+						<h3 className="text-lg font-bold text-white">
+							{user.fname} {user.lname}
+						</h3>
+					</div>
+					<div className="flex flex-wrap gap-2 items-start">
+						<Button
+							ghost
+							icon={<FontAwesomeIcon icon={faCog} />}
+							href="/settings"
+						>
+							Settings
+						</Button>
+						<Button
+							ghost
+							icon={<FontAwesomeIcon icon={faSignOutAlt} />}
+							theme="danger"
+							onClick={(e) => dispatch(logout())}
+						>
+							Logout
+						</Button>
+					</div>
 				</div>
-				<Button square href="/settings">
-					<FontAwesomeIcon icon={faCog} />
-				</Button>
-				<Button theme="danger" onClick={(e) => dispatch(logout())} square>
-					<FontAwesomeIcon icon={faSignOutAlt} />
-				</Button>
-			</div>
+			</Card>
 		);
 	} else {
 		return null;
