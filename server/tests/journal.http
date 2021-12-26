@@ -1,0 +1,27 @@
+### Create a journal
+POST http://localhost:5000/journals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTY0MDU1MjIzNiwiZXhwIjoxNjQwNTU1ODM2fQ.wALzMsMPl0s88Q5Em5bnbts4C_7PdbFoUD9cPSQnsvo
+
+{
+	"mood": "good",
+	"note": "today was a good day"
+}
+
+### Get all journals
+GET http://localhost:5000/journals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTY0MDU1MjIzNiwiZXhwIjoxNjQwNTU1ODM2fQ.wALzMsMPl0s88Q5Em5bnbts4C_7PdbFoUD9cPSQnsvo
+
+### Update a journal
+PUT http://localhost:5000/journals/61c8d73b6d358a594330ddde
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTY0MDU1MjIzNiwiZXhwIjoxNjQwNTU1ODM2fQ.wALzMsMPl0s88Q5Em5bnbts4C_7PdbFoUD9cPSQnsvo
+
+{
+	"mood": "okay",
+	"note": "today was an okay day"
+}
+
+### Delete a journal
+DELETE http://localhost:5000/journals/61c8d73b6d358a594330ddde
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTkyN2ExYjcwY2UzMmMzNzliNDA5YiIsImlhdCI6MTY0MDU1MjIzNiwiZXhwIjoxNjQwNTU1ODM2fQ.wALzMsMPl0s88Q5Em5bnbts4C_7PdbFoUD9cPSQnsvo

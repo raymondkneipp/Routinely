@@ -7,11 +7,12 @@ import morgan from "morgan";
 import tasksRoutes from "./routes/tasks.js";
 import waterRoutes from "./routes/water.js";
 import userRoutes from "./routes/user.js";
+import journalRoutes from "./routes/journal.js";
 
 const app = express();
 dotenv.config();
 
-// app.use(morgan("tiny"));
+// Log requests
 morgan.token("body", (req, res) => JSON.stringify(req.body));
 app.use(
 	morgan(
@@ -27,8 +28,9 @@ app.use(cors());
 app.get("/", (req, res) => res.send("Routinely"));
 
 app.use("/tasks", tasksRoutes);
-app.use("/water", waterRoutes);
+app.use("/waters", waterRoutes);
 app.use("/user", userRoutes);
+app.use("/journals", journalRoutes);
 
 const port = process.env.PORT || 5000;
 

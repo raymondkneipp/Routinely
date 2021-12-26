@@ -25,9 +25,9 @@ export const login = async (req, res) => {
 			expiresIn: "1h",
 		});
 
-		res.status(200).json({ token });
+		return res.status(200).json({ token });
 	} catch (error) {
-		res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
+		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
 };
 
@@ -46,9 +46,9 @@ export const register = async (req, res) => {
 			expiresIn: "1h",
 		});
 
-		res.status(200).json({ token });
+		return res.status(200).json({ token });
 	} catch (error) {
-		res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
+		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
 };
 
@@ -60,9 +60,9 @@ export const getUser = async (req, res) => {
 			return res.status(404).json({ errors: [{ msg: "No user found" }] });
 		}
 
-		res.status(200).json({ fname: user.fname, lname: user.lname });
+		return res.status(200).json({ fname: user.fname, lname: user.lname });
 	} catch (error) {
-		res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
+		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
 };
 
@@ -87,7 +87,7 @@ export const changePassword = async (req, res) => {
 
 		return res.status(200).json({ msg: "Password successfully changed" });
 	} catch (error) {
-		res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
+		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
 };
 
@@ -100,6 +100,6 @@ export const changeName = async (req, res) => {
 
 		return res.status(200).json({ fname, lname });
 	} catch (error) {
-		res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
+		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
 };

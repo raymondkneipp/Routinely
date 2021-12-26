@@ -55,7 +55,7 @@ export const completeTask = async (req, res) => {
 			{ new: true }
 		);
 
-		res.status(200).json(completedTask);
+		return res.status(200).json(completedTask);
 	} catch (error) {
 		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
@@ -73,7 +73,7 @@ export const incompleteTask = async (req, res) => {
 			},
 			{ new: true }
 		);
-		res.status(200).json(incompletedTask);
+		return res.status(200).json(incompletedTask);
 	} catch (error) {
 		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
@@ -85,7 +85,7 @@ export const deleteTask = async (req, res) => {
 	try {
 		const deletedTask = await Task.findByIdAndDelete(id);
 
-		res.status(200).json(deletedTask);
+		return res.status(200).json(deletedTask);
 	} catch (error) {
 		return res.status(500).json({ errors: [{ msg: "Something went wrong" }] });
 	}
