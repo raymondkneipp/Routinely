@@ -13,11 +13,11 @@ const CalendarPage = () => {
 			/>
 
 			<Card>
-				<Calendar showTasks showWater numOfDays={7} offset={2} />
+				<Calendar showTasks showWater showJournals numOfDays={7} offset={2} />
 
-				<Calendar showTasks showWater numOfDays={7} offset={1} />
+				<Calendar showTasks showWater showJournals numOfDays={7} offset={1} />
 
-				<Calendar showTasks showWater numOfDays={7} />
+				<Calendar showTasks showWater showJournals numOfDays={7} />
 			</Card>
 		</>
 	);

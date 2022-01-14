@@ -16,6 +16,7 @@ import {
 	Register,
 	Settings,
 } from "./pages";
+import JournalsPage from "./pages/JournalsPage";
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const App = () => {
 					<Route path="calendar" element={<CalendarPage />} />
 					<Route path="tasks" element={<TasksPage />} />
 					<Route path="water" element={<WaterPage />} />
+					<Route path="journals" element={<JournalsPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

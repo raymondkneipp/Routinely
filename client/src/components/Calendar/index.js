@@ -2,9 +2,15 @@ import React from "react";
 import moment from "moment";
 import Day from "./Day";
 
-const Calendar = ({ showTasks, showWater, numOfDays = 5, offset = 0 }) => {
+const Calendar = ({
+	showTasks,
+	showWater,
+	showJournals,
+	numOfDays = 5,
+	offset = 0,
+}) => {
 	var days = [];
-	const maxFutureDays = 2;
+	const maxFutureDays = 1;
 	var futureDays = 0;
 	var prevDays = 0;
 
@@ -31,7 +37,13 @@ const Calendar = ({ showTasks, showWater, numOfDays = 5, offset = 0 }) => {
 	return (
 		<div className="flex flex-col md:flex-row">
 			{days.map((day) => (
-				<Day date={day} key={day} showTasks={showTasks} showWater={showWater} />
+				<Day
+					date={day}
+					key={day}
+					showTasks={showTasks}
+					showWater={showWater}
+					showJournals={showJournals}
+				/>
 			))}
 		</div>
 	);

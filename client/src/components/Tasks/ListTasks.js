@@ -13,25 +13,23 @@ const ListTasks = ({ simplified = false }) => {
 		dispatch(getTasks());
 	}, [dispatch]);
 
-	return (
-		<>
-			{tasks.tasks.length ? (
-				<>
-					{tasks.tasks.map((task) => (
-						<Task
-							task={task}
-							key={task._id}
-							simplified={simplified}
-							edit={task._id === edit}
-							setEdit={(id) => setEdit(id)}
-						/>
-					))}
-				</>
-			) : (
-				<Placeholder loading={tasks.isLoading}>No Tasks Found</Placeholder>
-			)}
-		</>
-	);
+	if (tasks.tasks.length) {
+		return (
+			<>
+				{tasks.tasks.map((task) => (
+					<Task
+						task={task}
+						key={task._id}
+						simplified={simplified}
+						edit={task._id === edit}
+						setEdit={(id) => setEdit(id)}
+					/>
+				))}
+			</>
+		);
+	} else {
+		return <Placeholder loading={tasks.isLoading}>No Tasks Found</Placeholder>;
+	}
 };
 
 export default ListTasks;

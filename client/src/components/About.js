@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faList, faTint } from "@fortawesome/free-solid-svg-icons";
+import { faList, faPencilAlt, faTint } from "@fortawesome/free-solid-svg-icons";
 
 const AboutItem = ({ icon, title, description }) => {
 	return (
@@ -27,8 +27,8 @@ const About = () => {
 					description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda aperiam nisi dolorem! Earum accusamus incidunt sequi rerum cupiditate nostrum id architecto, soluta amet, molestias vitae delectus, reprehenderit veniam ab enim."
 				/>
 				<AboutItem
-					icon={faList}
-					title="Daily Tasks"
+					icon={faPencilAlt}
+					title="Daily Journals"
 					description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda aperiam nisi dolorem! Earum accusamus incidunt sequi rerum cupiditate nostrum id architecto, soluta amet, molestias vitae delectus, reprehenderit veniam ab enim."
 				/>
 				<AboutItem

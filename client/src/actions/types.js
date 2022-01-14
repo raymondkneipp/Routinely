@@ -22,3 +22,10 @@ export const WATER_GET = "WATER_GET";
 export const WATER_DELETE = "WATER_DELETE";
 export const WATER_ERROR = "WATER_ERROR";
 export const WATER_LOADING = "WATER_LOADING";
+
+export const JOURNAL_ADD = "JOURNAL_ADD";
+export const JOURNAL_GET = "JOURNAL_GET";
+export const JOURNAL_DELETE = "JOURNAL_DELETE";
+export const JOURNAL_UPDATE = "JOURNAL_UPDATE";
+export const JOURNAL_ERROR = "JOURNAL_ERROR";
+export const JOURNAL_LOADING = "JOURNAL_LOADING";

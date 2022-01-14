@@ -19,7 +19,7 @@ const User = () => {
 			<Card>
 				<div className="flex flex-wrap justify-between sm:items-center gap-5">
 					<div className="flex items-center gap-5">
-						<div className="flex bg-gray-300 text-black rounded-full overflow-hidden items-end justify-center w-10 h-10">
+						<div className="flex bg-gray-300 text-black rounded-lg overflow-hidden items-end justify-center w-10 h-10">
 							<FontAwesomeIcon icon={faUser} size="2x" />
 						</div>
 						<h3 className="text-lg font-bold text-white">

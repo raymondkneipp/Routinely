@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 .tooltip {
-	opacity: 1 !important;
-	@apply font-bold rounded-md w-36 h-12 flex items-center justify-center text-center text-base transition-all !important;
+	@apply z-50 font-bold rounded-lg w-36 h-12 flex items-center justify-center text-center text-base transition-all opacity-100 !important;
 }

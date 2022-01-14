@@ -2,12 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
-const Input = ({ label, name, errors, ...rest }) => {
+const Textarea = ({ label, name, errors, ...rest }) => {
 	const focus = `outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50`;
 	const hover = ``;
 	const size = `px-4 py-2`;
 
-	const styles = `${focus} ${hover} ${size} transition-all rounded-lg border-gray-600 text-white bg-transparent flex-1 rounded-lg py-2 px-4 border`;
+	const styles = `${focus} ${hover} ${size} transition-colors rounded-lg border-gray-600 text-white bg-transparent rounded-lg py-2 px-4 border resize-y`;
 
 	const error = errors?.find((error) => error.param === name);
 
@@ -18,7 +18,7 @@ const Input = ({ label, name, errors, ...rest }) => {
 					{label}
 				</label>
 			)}
-			<input className={styles} name={name} id={label} {...rest} />
+			<textarea className={styles} name={name} id={label} {...rest} rows={4} />
 			{error && (
 				<label className="text-sm mt-2 normal-case text-red-300 flex items-center space-x-2">
 					<FontAwesomeIcon icon={faExclamationCircle} size="sm" />
@@ -29,4 +29,4 @@ const Input = ({ label, name, errors, ...rest }) => {
 	);
 };
 
-export default Input;
+export default Textarea;

@@ -13,6 +13,7 @@ const Button = ({
 	loading,
 	wide,
 	type = "button",
+	lg = false,
 	...rest
 }) => {
 	let color;
@@ -25,7 +26,10 @@ const Button = ({
 			color = "-green-";
 			break;
 		case "primary":
-			color = "-green-";
+			color = "-indigo-";
+			break;
+		case "warning":
+			color = "-yellow-";
 			break;
 		default:
 			color = "-gray-";
@@ -34,7 +38,7 @@ const Button = ({
 	const disabled = "disabled:opacity-50 disabled:cursor-not-allowed";
 	const focus = `outline-none focus:ring-4 focus:ring${color}300 focus:ring-opacity-50`;
 	const hover = `hover:bg${color}200 hover:text-gray-900 hover:scale-110`;
-	const size = `${square ? "w-10 h-10" : "px-4 py-2 h-10"} ${
+	const size = `${square ? "w-10 h-10" : lg ? "px-8 py-4" : "px-4 py-2 h-10"} ${
 		wide ? "w-full" : ""
 	}`;
 	const colors = `${
@@ -43,7 +47,7 @@ const Button = ({
 			: `text-gray-900 bg${color}300`
 	}`;
 
-	const styles = `${focus} ${hover} ${size} ${colors} ${disabled} transition-all font-bold rounded-md inline-flex items-center justify-center space-x-2 text-center`;
+	const styles = `${focus} ${hover} ${size} ${colors} ${disabled} transition-all font-bold rounded-lg inline-flex items-center justify-center space-x-2 text-center`;
 
 	if (href) {
 		return (

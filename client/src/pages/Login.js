@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header, Input, Card, Button } from "../components";
+import { Header, Input, Card, Button, Alert } from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../actions/auth";
@@ -42,10 +42,10 @@ const Login = () => {
 				title="Sign In"
 			/>
 
-			<div className="bg-red-300 p-5 text-gray-900 text-center rounded-md">
+			<Alert type="info">
 				For Testing Purposes email: <strong>test@test.test</strong> password:{" "}
 				<strong>test</strong>
-			</div>
+			</Alert>
 			<form onSubmit={handleSubmit}>
 				<Card>
 					<Input

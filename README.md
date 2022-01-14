@@ -49,7 +49,8 @@ JWT_SECRET=thisisasecret
 5. Run `npm run dev`
 6. In a new terminal navigate to `client/`
 7. Run `npm install`
-8. Run `npm run start`
+8. Uncomment line 2 and comment line 3 of `client/src/api/index.js` to change the api url to localhost
+9. Run `npm run start`
 
 ## Deployment
 
@@ -91,11 +92,28 @@ JWT_SECRET=thisisasecret
 - Cardio Log
 - Meditation Guide
 - Daily Graditude
+  - Add to daily journal
 - Intermittent Fasting
 - Mood Tracker
+  - Good, Okay, Bad
+  - Option to add note about the day
 - Dynamic stretches (warm up)
 - Static stretches (cool down)
 - Move get requests to App.js so they run once rather than every time you visit the page
 - Typescript?
 - Improve navigation for mobile
 - Finish home page
+- addWater remove date and make it default in the mongoose schema
+- JWT refresh token
+- Create widget component for all
+- Move button, input, textarea, etc. into Form folder
+- Create error component (replace input error and test login alert)
+- Daily Tasks Features
+  - Time input (alert user at time)
+  - Order tasks
+  - Frequency (weekly, on these days, etc.)
+- Update water functionality
+- Redirect authed users from landing page
+- Upgrade tailwindcss v3
+- Calendars week format
+- Caffeine trackers

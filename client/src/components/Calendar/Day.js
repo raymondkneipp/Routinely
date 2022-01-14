@@ -4,48 +4,79 @@ import { isSameDay } from "../../utils";
 import { useSelector } from "react-redux";
 import Status from "./Status";
 
-const Day = ({ date, showTasks, showWater }) => {
+const Day = ({ date, showTasks, showWater, showJournals }) => {
 	const tasks = useSelector((state) => state.tasks);
-	const [isTasksCompleted, setIsTasksCompleted] = useState(null);
+	const [isTasksCompleted, setIsTasksCompleted] = useState("off");
 	const water = useSelector((state) => state.water);
-	const [isWaterCompleted, setIsWaterCompleted] = useState(null);
+	const [isWaterCompleted, setIsWaterCompleted] = useState("off");
+	const journals = useSelector((state) => state.journals);
+	const [journalStatus, setJournalStatus] = useState("off");
 
 	useEffect(() => {
 		if (date.isAfter(new Date())) {
-			setIsTasksCompleted(null);
+			setIsTasksCompleted("off");
 		} else {
-			setIsTasksCompleted(
+			if (
 				tasks.tasks.every((task) => {
 					return task.completedDates.some((d) => {
 						return isSameDay(d, date.toISOString());
 					});
 				})
-			);
+			) {
+				setIsTasksCompleted("success");
+			} else {
+				setIsTasksCompleted("danger");
+			}
 		}
 	}, [tasks, date]);
 
 	useEffect(() => {
 		if (date.isAfter(new Date())) {
-			setIsWaterCompleted(null);
+			setIsWaterCompleted("off");
 		} else {
-			setIsWaterCompleted(false);
-			// todo finish logic
-			// get sum of water for date and see if it is more than goal (2500)
-
-			setIsWaterCompleted(
+			if (
 				water?.water
 					.filter((w) => isSameDay(w.drankAt, date.toISOString()))
 					.map((item) => item.amount)
 					.reduce((prev, current) => prev + current, 0) >= 2500
-			);
+			) {
+				setIsWaterCompleted("success");
+			} else {
+				setIsWaterCompleted("danger");
+			}
 		}
 	}, [water, date]);
+
+	useEffect(() => {
+		setJournalStatus("warning");
+		if (date.isAfter(new Date())) {
+			setJournalStatus("off");
+		} else {
+			const mood = journals?.journals.filter((j) =>
+				isSameDay(j.wroteAt, date.toISOString())
+			)[0]?.mood;
+
+			switch (mood) {
+				case "good":
+					setJournalStatus("success");
+					break;
+				case "okay":
+					setJournalStatus("warning");
+					break;
+				case "bad":
+					setJournalStatus("danger");
+					break;
+				default:
+					setJournalStatus("off");
+			}
+		}
+	}, [journals, date]);
 
 	return (
 		<div
 			className={`${
 				moment().isSame(date, "day") ? "bg-gray-700" : "text-gray-400"
-			} rounded-md p-2 flex-1`}
+			} rounded-lg p-2 flex-1`}
 		>
 			<div className="flex items-center justify-between">
 				<h5>{date.format("ddd")}</h5>
@@ -53,6 +84,7 @@ const Day = ({ date, showTasks, showWater }) => {
 			</div>
 			{showTasks && <Status title="Tasks" status={isTasksCompleted} />}
 			{showWater && <Status title="Water" status={isWaterCompleted} />}
+			{showJournals && <Status title="Mood" status={journalStatus} />}
 		</div>
 	);
 };
