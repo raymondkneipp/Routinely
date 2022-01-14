@@ -44,7 +44,7 @@ const Task = ({ task, simplified, edit, setEdit }) => {
 				loading={tasks.isLoading}
 				onClick={() => {
 					if (completed) {
-						dispatch(incompleteTask(task._id, completed));
+						dispatch(incompleteTask(task._id, completed)); // I believe this is the problem
 					} else {
 						dispatch(completeTask(task._id));
 					}
