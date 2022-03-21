@@ -1,10 +1,8 @@
 # Routinely
 
-Routinely is a health and productivity app.
+> Routinely is a health and productivity app.
 
-## Demo
-
-The demo can be found [here](https://getroutinely.netlify.app/)
+[Routinely Website](https://getroutinely.netlify.app/)
 
 ## The Stack
 
@@ -86,6 +84,7 @@ JWT_SECRET=thisisasecret
 - Create a custom chart for water
 - Weight Tracker
 - Sleep Tracker
+	- With features like sleep cycle
 - Breathing Exercises
 - Meal Planner
 - Training Log
@@ -93,10 +92,13 @@ JWT_SECRET=thisisasecret
 - Meditation Guide
 - Daily Graditude
   - Add to daily journal
+  - "What am I grateful for today?"
+  - Daily prompts
 - Intermittent Fasting
 - Mood Tracker
   - Good, Okay, Bad
   - Option to add note about the day
+  - Keep notes on how you feel throughout the day
 - Dynamic stretches (warm up)
 - Static stretches (cool down)
 - Move get requests to App.js so they run once rather than every time you visit the page
