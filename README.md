@@ -119,3 +119,7 @@ JWT_SECRET=thisisasecret
 - Upgrade tailwindcss v3
 - Calendars week format
 - Caffeine trackers
+- Lazy time, Relax time, etc.
+  - Spend a little bit of time everyday on yourself
+  - Do something you enjoy
+  - Be lazy but not too lazy
