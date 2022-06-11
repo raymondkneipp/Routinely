@@ -123,3 +123,5 @@ JWT_SECRET=thisisasecret
   - Spend a little bit of time everyday on yourself
   - Do something you enjoy
   - Be lazy but not too lazy
+- Time boxing
+- Self reflection
